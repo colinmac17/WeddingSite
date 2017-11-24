@@ -10,3 +10,11 @@ export const Title = styled.h1`
 export const HR = styled.hr`
     border-bottom: ${props => props.borderBottom};
 `;
+
+export const DateOfWedding = styled.h3`
+    font-family: 'La Belle Aurore', cursive;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 20px;
+    color: ${props => props.color};
+`;

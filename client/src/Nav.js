@@ -7,10 +7,10 @@ const Nav = () => {
         <div className="container">
             <Title className="center-align"><Link to="/" className="nav-links">Colin and Kelsey</Link></Title>
             <NavLinks>
-                <NavLink color="#046487"><Link className="nav-links" to="/">Home</Link></NavLink>
-                <NavLink color="slategray"><Link className="nav-links" to="/details">Details</Link></NavLink>
-                <NavLink color="black"><Link className="nav-links" to="/rsvp">RSVP</Link></NavLink>
-                <NavLink color="goldenrod"><Link className="nav-links" to="/register">Register</Link></NavLink>
+                <NavLink color="#046487"><Link className="nav-links hoverable" to="/">Home</Link></NavLink>
+                <NavLink color="slategray"><Link className="nav-links hoverable" to="/details">Details</Link></NavLink>
+                <NavLink color="black"><Link className="nav-links hoverable" to="/rsvp">RSVP</Link></NavLink>
+                <NavLink color="goldenrod"><Link className="nav-links hoverable" to="/register">Register</Link></NavLink>
             </NavLinks>
             <br/>
             <HR borderBottom="3px solid slategray"/>

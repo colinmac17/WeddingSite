@@ -2,17 +2,24 @@ import React from 'react';
 import {render} from 'react-dom';
 import NotFound from './NotFound';
 import App from './App';
-// import 'bootstrap/dist/css/bootstrap.css';
+import Nav from './Nav';
+import Details from './Details';
+import RSVP from './RSVP';
+import Register from './Register';
 import './index.css';
-import { BrowserRouter as Router, Route, Switch, Match} from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 import registerServiceWorker from './registerServiceWorker';
 
 const Root = (props) => {
     return(
         <Router>
             <div>
+            <Nav/>
                 <Switch>
                     <Route exact path="/" component={App}/>
+                    <Route exact path="/details" component={Details}/>
+                    <Route exact path="/register" component={Register}/>
+                    <Route exact path="/rsvp" component={RSVP}/>
                     <Route component={NotFound}/>
                 </Switch>
             </div>

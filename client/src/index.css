@@ -24,15 +24,7 @@ body {
   padding: 5px;
 }
 
-.mobile-instructions {
-  display: none;
-  text-align: center;
-}
-
 @media screen and (max-width:500px) {
-  .mobile-instructions{
-    display:block;
-  }
   .colin-and-kelsey a{
     font-size: 40px;
   }

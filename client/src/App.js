@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <DateOfWedding color="#3e3e3e">06/16/2018 @ Galleria Marchetti</DateOfWedding>
+        <DateOfWedding color="#3e3e3e">06/16/2018</DateOfWedding>
         <Slider />
       </div>
     );

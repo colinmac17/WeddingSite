@@ -1,11 +1,11 @@
 import React from 'react';
-import { NavLinks, NavLink, Title, HR } from './Styles'; 
+import { NavLinks, NavLink, MainTitle, HR } from './Styles'; 
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
     return (
         <div className="container">
-            <Title className="center-align"><Link to="/" className="nav-links">Colin and Kelsey</Link></Title>
+            <MainTitle className="center-align"><Link to="/" className="nav-links">Colin and Kelsey</Link></MainTitle>
             <NavLinks>
                 <NavLink color="#046487"><Link className="nav-links hoverable" to="/">Home</Link></NavLink>
                 <NavLink color="slategray"><Link className="nav-links hoverable" to="/details">Details</Link></NavLink>

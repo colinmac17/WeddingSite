@@ -8,6 +8,7 @@ class App extends Component {
     return (
       <div className="container">
         <DateOfWedding color="#3e3e3e">06/16/2018</DateOfWedding>
+        <p className="mobile-instructions">Slide to Scroll through images</p>
         <Slider />
       </div>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Title, SmallTitle } from './Styles';
 import { Row, Col } from 'react-materialize';
+import Map from './Map';
 
 const details = ['Location: Chicago, IL', 'Venue: Galleria Marchetti', 'Date: Saturday June 16, 2018', 'Time: 6PM - 11PM CST', 'Food: Italian' , 'Beverage: Open Bar', 'Dancing to follow'];
 
@@ -14,7 +15,7 @@ const Details = () => {
             <Title>Details</Title>
             <Row>
                 <Col s={12} m={6}>
-                    <img className="responsive-img" src="http://res.cloudinary.com/soccerresume/image/upload/v1511557323/pergola_w9qf8o.jpg"/>
+                    <Map width="400" height="400" />
                 </Col>
                 <Col s={12} m={6}>
                     <ul>

@@ -29,6 +29,17 @@ class App extends Component {
           <SmallTitle>The Proposal</SmallTitle>
           <HR borderBottom="3px solid #3e3e3e" />
           <p>We had talked about getting married someday for sometime and while we were not shy about the subject, Kelsey always joked that I could not propose to her on our Europe trip. So, in perfect Colin fashion, I decided to Propse to her in Europe on our first full day on the trip. I really wanted the rest of the trip to be a celebration and the stress to be off my back. I did my best to make it the perfect moment for her - I made sure no one was around, that it was a beautiful day in a romantic setting and that I got a picture! I actually ended up setting up my phone and recording the whole thing. This was the most perfect moment in our lives together so far.</p>
+        </Col>
+      </Row>
+      <br/><br/>
+      <Row>
+        <Col m={6} xs={12}>
+          <img className="responsive-img" src="http://res.cloudinary.com/soccerresume/image/upload/v1511557323/pergola_w9qf8o.jpg"/>
+        </Col>
+        <Col m={6} xs={12}>
+          <SmallTitle>The Wedding</SmallTitle>
+          <HR borderBottom="3px solid #3e3e3e" />
+          <p>Please join us at Galleria Marchetti on June 16, 2018. Learn more by clicking the button below.</p>
           <br/>
           <Link to="/details" className="btn waves">Wedding Details</Link>
         </Col>

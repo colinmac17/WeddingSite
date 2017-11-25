@@ -16,7 +16,7 @@ class App extends Component {
         <Col m={6} xs={12}>
           <SmallTitle>Our Story</SmallTitle>
           <HR borderBottom="3px solid #3e3e3e" />
-          <p>We first met during in May of 2014 while staying in Ann Arbor for the Spring Term. Kelsey lived in the house across the street from me on Greenwood Ave. for the summer, which happened to be a mutual friends home. At first we were just friends, and actually we always joke how we didn't really even like eachother. However, by the end of the summer, I was constantly going to visit her at work and going on coffee dates in the mornings. The rest is history! </p>
+          <p>We first met during May of 2014 while staying in Ann Arbor for the Spring Term. Kelsey lived in the house across the street from me on Greenwood Ave. for the summer, which happened to be a mutual friends home. At first we were just friends, and actually we always joke how we didn't really even like eachother. However, by the end of the summer, I was constantly going to visit her at work and going on coffee dates in the mornings. The rest is history! </p>
         </Col>
       </Row>
       <br/><br/>

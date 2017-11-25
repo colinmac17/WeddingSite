@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Title } from './Styles';
+import firebase from 'firebase';
 import { Row, Input, Button } from 'react-materialize';
 
-const RSVP = () => {
+class RSVP extends Component {
+    // componentDidMount() {
+    //     firebase.initializeApp({
+    //         apiKey: "AIzaSyAFwrDcEA_E5t7R9THRM_ohRx09TRXhsY4",
+    //         authDomain: "weddingsite-55ce1.firebaseapp.com",
+    //         databaseURL: "https://weddingsite-55ce1.firebaseio.com",
+    //         projectId: "weddingsite-55ce1",
+    //         storageBucket: "weddingsite-55ce1.appspot.com",
+    //         messagingSenderId: "461103669692"
+    //     });
+    //   }
+    render() {
     return (
         <div className="container">
             <Title>RSVP (Coming Soon)</Title>
@@ -23,6 +35,7 @@ const RSVP = () => {
             </Row>
         </div>
     )
+  }
 }
 
 export default RSVP;

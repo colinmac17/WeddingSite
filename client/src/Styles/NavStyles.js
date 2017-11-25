@@ -9,11 +9,11 @@ text-align: center;
 
 export const NavLink = styled.span`
 padding: 5px 8px;
+font-size: 20px;
 border-radius: 3px;
 transition: all 0.3s ease;
 color: #FFF;
-margin: 10px;
-padding:8px;
+margin: 5px;
 text-decoration: none;
 background-color: ${props => props.color};
 `;

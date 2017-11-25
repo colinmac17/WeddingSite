@@ -5,7 +5,7 @@ import { Row, Input, Button } from 'react-materialize';
 const RSVP = () => {
     return (
         <div className="container">
-            <Title>RSVP</Title>
+            <Title>RSVP (Coming Soon)</Title>
             <Row>
                 <p>This page is under development</p>
                 <Input placeholder="First Name" name="first_name" label="First Name" disabled />

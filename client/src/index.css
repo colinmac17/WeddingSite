@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background-color: cream;
+  background-color: lightgrey;
 }
 
 .nav-links {
@@ -24,8 +24,29 @@ body {
   padding: 5px;
 }
 
+.main p {
+  font-size: 20px;
+}
+
+.box-img {
+  border-radius: 10px;
+}
+
 @media screen and (max-width:500px) {
   .colin-and-kelsey a{
     font-size: 40px;
+  }
+  .nav-links{
+    font-size: 14px;
+    padding: 2px;
+    margin: 2px;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .nav-links{
+    font-size: 12px;
+    padding: 0px;
+    margin: 0px;
   }
 }

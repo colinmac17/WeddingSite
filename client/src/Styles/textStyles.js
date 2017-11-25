@@ -21,10 +21,16 @@ export const DateOfWedding = styled.h3`
 
 export const Title = styled.h1`
     font-size: 38px;
-    margin-bottom: 30px;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 5px;
+`;
+
+export const SmallTitle = styled.h1`
+font-size: 28px;
+text-transform: uppercase;
+font-weight: 900;
+letter-spacing: 5px;
 `;
 
 export const listItem = styled.li`
@@ -32,3 +38,9 @@ export const listItem = styled.li`
     font-weight: 700;
     color: ${props => props.color}
 `;
+
+export const Countdown = styled.p`
+    font-size: 20px;
+    font-weight: 700;
+    color: ${props => props.color};
+`

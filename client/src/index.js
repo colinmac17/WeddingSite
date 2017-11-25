@@ -6,6 +6,7 @@ import Nav from './Nav';
 import Details from './Details';
 import RSVP from './RSVP';
 import Register from './Register';
+import Photos from './Photos'
 import './index.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 import registerServiceWorker from './registerServiceWorker';
@@ -18,7 +19,8 @@ const Root = (props) => {
                 <Switch>
                     <Route exact path="/" component={App}/>
                     <Route exact path="/details" component={Details}/>
-                    <Route exact path="/register" component={Register}/>
+                    <Route exact path="/photos" component={Photos}/>
+                    <Route exact path="/registry" component={Register}/>
                     <Route exact path="/rsvp" component={RSVP}/>
                     <Route component={NotFound}/>
                 </Switch>

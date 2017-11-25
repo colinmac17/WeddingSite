@@ -32,6 +32,11 @@ body {
   border-radius: 10px;
 }
 
+.hoverable {
+  border-radius: 5px;
+  padding: 10px;
+}
+
 @media screen and (max-width:500px) {
   .colin-and-kelsey a{
     font-size: 40px;

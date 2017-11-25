@@ -28,7 +28,7 @@ class App extends Component {
         <Col m={6} xs={12}>
           <SmallTitle>The Proposal</SmallTitle>
           <HR borderBottom="3px solid #3e3e3e" />
-          <p>We had talked about getting married someday for sometime and while we were not shy about the subject, Kelsey always joked that I cannot propose to her on our Europe trip. So, in perfect Colin fasion, I decided to Propse to her in Europe on our first full day on the trip. I really wanted the rest of the trip to be a celebration and the stress to be off my back. I did my best to make it the perfect moment for her - I made sure no one was around, that it was a beautiful day in a romantic setting and that I got a picture! I actually ended up setting up my phone and recording the whole thing. This was the most perfect moment in our lives together so far.</p>
+          <p>We had talked about getting married someday for sometime and while we were not shy about the subject, Kelsey always joked that I could not propose to her on our Europe trip. So, in perfect Colin fashion, I decided to Propse to her in Europe on our first full day on the trip. I really wanted the rest of the trip to be a celebration and the stress to be off my back. I did my best to make it the perfect moment for her - I made sure no one was around, that it was a beautiful day in a romantic setting and that I got a picture! I actually ended up setting up my phone and recording the whole thing. This was the most perfect moment in our lives together so far.</p>
           <br/>
           <Link to="/details" className="btn waves">Wedding Details</Link>
         </Col>

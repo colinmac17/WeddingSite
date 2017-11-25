@@ -15,7 +15,7 @@ const Details = () => {
             <Title>Details</Title>
             <Row>
                 <Col s={12} m={6}>
-                    <Map width="400" height="400" />
+                    <Map width="400" height="400"/>
                 </Col>
                 <Col s={12} m={6}>
                     <ul>

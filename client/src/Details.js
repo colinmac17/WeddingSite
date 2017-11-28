@@ -11,7 +11,7 @@ const detailList = details.map((detail, idx) => {
 
 const Details = () => {
     return (
-        <div className="container details">
+        <div className="container details" id="details">
             <Title>Details</Title>
             <Row>
                 <Col s={12} m={6}>

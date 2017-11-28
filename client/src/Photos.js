@@ -4,7 +4,7 @@ import { Title } from './Styles';
 
 const Photos = () => {
     return (
-        <div className="container photos">
+        <div className="container photos" id="photos">
             <Title>Photos</Title>
             <Slider/>
         </div>

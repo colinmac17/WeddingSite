@@ -16,7 +16,7 @@ class RSVP extends Component {
     //   }
     render() {
     return (
-        <div className="container">
+        <div className="container" id="registry">
             <Title>RSVP (Coming Soon)</Title>
             <Row>
                 <p>This page is under development</p>

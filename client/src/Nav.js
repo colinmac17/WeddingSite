@@ -8,7 +8,7 @@ var scrollToElement = require('scroll-to-element');
 const handleClick = (id) => {
     scrollToElement(id, {
         offset: 0,
-        duration: 300
+        duration: 500
     });
 }
 
@@ -18,7 +18,7 @@ const Nav = () => {
             <MainTitle className="center-align colin-and-kelsey"><Link to="/" className="nav-links">Colin and Kelsey</Link></MainTitle>
             <DateOfWedding color="#3e3e3e">06/16/2018</DateOfWedding>
             <div id="nav-container">
-            <NavLinks>
+            <NavLinks clasName="nav-links-ul">
                 <NavLink color="transparent"><Link onClick={handleClick('#home')}className="nav-links hoverable" to="/">Home</Link></NavLink>
                 <NavLink color="transparent"><Link onClick={handleClick('#details')}className="nav-links hoverable" to="/details">Details</Link></NavLink>
                 <NavLink color="transparent"><Link onClick={handleClick('#photos')} className="nav-links hoverable" to="/photos">Photos</Link></NavLink>

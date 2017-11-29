@@ -52,6 +52,17 @@ p{
   font-family: 'Noto Serif', serif;
 }
 
+.details {
+  font-family: 'Noto Serif', serif;
+  margin-top: 10px;
+}
+
+.details .bold {
+  font-weight: 900;
+  padding: 5px;
+  border: 1px solid #3e3e3e;
+}
+
 @media screen and (max-width:900px) {
   .map {
     width: 350px;

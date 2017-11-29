@@ -6,7 +6,10 @@ import Map from './Map';
 const details = ['Location: Chicago, IL', 'Venue: Galleria Marchetti', 'Date: Saturday June 16, 2018', 'Time: 6PM - 11PM CST', 'Food: Italian' , 'Beverage: Open Bar', 'Dancing to follow'];
 
 const detailList = details.map((detail, idx) => {
-    return <li key={idx}>{detail}</li>;
+    const detailArray = detail.split(':');
+    const detailTitle = detailArray[0];
+    const detailDesc = detailArray[1];
+    return <li className="details" key={idx}><b className="bold">{detailTitle}</b>{detailDesc}</li>;
 });
 
 const Details = () => {

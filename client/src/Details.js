@@ -23,7 +23,7 @@ const Details = () => {
                     </ul>
                 </Col>
                 <Col sm={12} md={6}>
-                    <p>Below are some of our favorite restaurants and things to do in the city. We have also highlighted the venue and hotel accomodations for your convenience</p>
+                    <p>Below are some of our favorite restaurants and things to do in the city. We have also highlighted the venue and hotel accomodations for your convenience.</p>
                 </Col>
             </Row>
             <br/>
@@ -40,7 +40,7 @@ const Details = () => {
                 </Col>
             </Row>
             <Row>
-                <SmallTitle>Travel and Transportation (Coming Soon)</SmallTitle>
+            <SmallTitle>Places to Eat (Coming Soon)</SmallTitle>
                 <Col s={12} m={6}>
                 </Col>
                 <Col s={12} m={6}>
@@ -48,6 +48,13 @@ const Details = () => {
             </Row>
             <Row>
             <SmallTitle>Things to Do (Coming Soon)</SmallTitle>
+                <Col s={12} m={6}>
+                </Col>
+                <Col s={12} m={6}>
+                </Col>
+            </Row>
+            <Row>
+                <SmallTitle>Travel and Transportation (Coming Soon)</SmallTitle>
                 <Col s={12} m={6}>
                 </Col>
                 <Col s={12} m={6}>

@@ -8,9 +8,18 @@ import RSVP from './RSVP';
 import Register from './Register';
 import Photos from './Photos'
 import Guests from './Guests';
+import { BackToTop } from './Styles';
 import './index.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
 import registerServiceWorker from './registerServiceWorker';
+var scrollToElement = require('scroll-to-element');
+
+const handleClick = (id) => {
+    scrollToElement(id, {
+        offset: 0,
+        duration: 500
+    });
+}
 
 const Root = (props) => {
     return(
@@ -26,6 +35,9 @@ const Root = (props) => {
                     <Route exact path="/guests" component={Guests}/>
                     <Route component={NotFound}/>
                 </Switch>
+                {/*<div className="center-align" onClick={handleClick('.nav')}>
+                    <BackToTop>Back To top</BackToTop>
+                </div>*/}
             </div>
         </Router>
     )

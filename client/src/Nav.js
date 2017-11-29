@@ -14,7 +14,7 @@ const handleClick = (id) => {
 
 const Nav = () => {
     return (
-        <div className="container">
+        <div className="container nav">
             <MainTitle className="center-align colin-and-kelsey"><Link to="/" className="nav-links">Colin and Kelsey</Link></MainTitle>
             <DateOfWedding color="#3e3e3e">06/16/2018</DateOfWedding>
             <div id="nav-container">

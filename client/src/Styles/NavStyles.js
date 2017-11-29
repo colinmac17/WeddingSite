@@ -19,3 +19,15 @@ margin: 5px;
 text-decoration: none;
 background-color: ${props => props.color};
 `;
+
+export const BackToTop = styled.button`
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #3e3e3e;
+    text-align: center;
+    max-width: 300px;
+`;

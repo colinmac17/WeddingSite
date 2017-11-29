@@ -9,7 +9,7 @@ const detailList = details.map((detail, idx) => {
     const detailArray = detail.split(':');
     const detailTitle = detailArray[0];
     const detailDesc = detailArray[1];
-    return <li className="details" key={idx}><b className="bold">{detailTitle}</b>{detailDesc}</li>;
+    return <li className="details-li" key={idx}><b className="bold">{detailTitle}</b>{detailDesc}</li>;
 });
 
 const Details = () => {
@@ -17,13 +17,19 @@ const Details = () => {
         <div className="container details" id="details">
             <Title>Details</Title>
             <Row>
-                <Col s={12} m={6}>
-                    <Map width="400" height="400"/>
-                </Col>
-                <Col s={12} m={6}>
+                <Col sm={12} md={6}>
                     <ul>
                     {detailList}
                     </ul>
+                </Col>
+                <Col sm={12} md={6}>
+                    <p>Below are some of our favorite restaurants and things to do in the city. We have also highlighted the venue and hotel accomodations for your convenience</p>
+                </Col>
+            </Row>
+            <br/>
+            <Row>
+                <Col xs={12}>
+                    <Map width={1000} height={600}/>
                 </Col>
             </Row>
             <Row>

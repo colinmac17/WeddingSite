@@ -3,6 +3,7 @@ const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
 const http = require('http');
+const moment = require('moment';)
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -11,7 +12,7 @@ if (process.env.NODE_ENV === "production") {
 
 setInterval(function() {
   http.get("http://colinandkelsey.herokuapp.com");
-}, 300000); // every 5 minutes (300000)
+}, 1500000); // every 25 minutes (300000)
 
 // Send every request to the React app
 // Define any API routes before this runs

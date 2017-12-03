@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Title } from './Styles';
-import firebase from 'firebase';
 import { Row, Input, Button } from 'react-materialize';
 
 class RSVP extends Component {

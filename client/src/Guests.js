@@ -6,26 +6,17 @@ class Guests extends Component {
     constructor(){
         super()
         this.state = {
-            guests: {'1': 'colin'}
+            guests: {}
         }
-    }
+    }   
+
     componentWillMount(){
-        this.ref = base.syncState(`guests`, {
+        base.syncState(`/guests`, {
             context: this,
-            state: 'guests'
+            state: ''
           });
     }
 
-    componentDidMount(){
-        base.bindToState('guests', {
-            context: this,
-            state: 'guests'
-          });
-    }
-    
-    componentWillUnmount(){
-        base.removeBinding(this.ref);
-    }
 
     render(){
         return (

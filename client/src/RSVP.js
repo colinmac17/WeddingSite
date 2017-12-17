@@ -28,25 +28,31 @@ class RSVP extends Component {
                 rsvp: false
             },
             message: 'Thank you for submitting your rsvp!',
-            helpMessage: 'Please fill our all fields!',
+            helpMessage: 'Please fill ouy all fields!',
             errMessage: 'You have either already RSVPED or there was an internal server error on our end, please contact me at colin.g.mcatee@gmail.com for assistance or to submit your RSVP!',
             showMessage: false,
             showErrMessage: false,
-            showHelpMessage: false
+            showHelpMessage: false,
+            aaGuestNames: []
         }
     }
 
-    // validateForm() {
-    //     database.ref().on('value', (snapshot) => {
-    //         const oGuests = snapshot.val().guests;
-    //         const aaGuestNames = Object.keys(oGuests);
-    //         let aaGuests = [];
-    //         aaGuestNames.forEach((guest) => {
-    //             let guestData = oGuests[guest];
-    //             aaGuests.push(guestData);
-    //         });
-    //     });
-    // }
+    componentDidMount(){
+        let aaGuestNames;
+        database.ref().on('value', (snapshot) => {
+            const oGuests = snapshot.val().guests;
+            aaGuestNames = Object.keys(oGuests);
+            this.setState({aaGuestNames: aaGuestNames})
+        });
+    }
+
+    validateForm(firstname, lastname) {
+        this.state.aaGuestNames.forEach((name) => {
+            if(`${firstname.toLowerCase()} ${lastname.toLowerCase()}` == name){
+                return false
+            }
+        });
+    }
 
     onChange = (e) => {
         const guest = this.state.guest
@@ -58,44 +64,41 @@ class RSVP extends Component {
       }
 
       submitToFirebase(firstname ,lastname, foodchoice, rsvp, email) {
-            database.ref(`/guests/${firstname.toLowerCase()} ${lastname.toLowerCase()}`).push({
-                firstname: firstname.toLowerCase(),
-                lastname: lastname.toLowerCase(),
-                email: email.toLowerCase(),
-                foodchoice: foodchoice,
-                rsvp: rsvp
-            },((err) => {
-                if(err){
-                    console.log(err);
-                    this.setState({showErrMessage: true })
-                }
-                if(!err){
-                    this.setState({ showMessage: true })
-                    setTimeout(() => {
-                        this.setState({ showMessage: false })
-                    }, 3000)
-                    this.Redir()
-                }
-            }));
+                database.ref(`/guests/${firstname.toLowerCase()} ${lastname.toLowerCase()}`).push({
+                    firstname: firstname.toLowerCase(),
+                    lastname: lastname.toLowerCase(),
+                    email: email.toLowerCase(),
+                    foodchoice: foodchoice,
+                    rsvp: rsvp
+                },((err) => {
+                    if(err){
+                        console.log(err);
+                        this.setState({showErrMessage: true })
+                    }
+                    if(!err){
+                        this.setState({ showMessage: true })
+                    }
+                }));
       }
 
       handleButtonClick = (e) => {
         const { firstname, lastname, foodchoice, rsvp, email } = this.state.guest;
         e.preventDefault();
+
+        let fullName = firstname.toLowerCase() + ' ' + lastname.toLowerCase()
+        let inValidNames = []
+        this.state.aaGuestNames.forEach(name => {
+            if(name == fullName) inValidNames.push(name);
+        });
+        
+        if(inValidNames.length > 0) this.setState({showErrMessage: true})
+        else {
         if(firstname.length > 0 && lastname.length > 0 && email.length > 0){
             this.submitToFirebase(firstname, lastname, foodchoice, rsvp, email);
          } else {
             this.setState({showHelpMessage: true}) 
-            setTimeout(() => {
-                this.setState({ showHelpMessage: false })
-            }, 3000)
          }
-      }
-
-      Redir = () => { 
-        setTimeout(() => {
-            window.location.pathname = '/'
-        }, 1000)
+        }
       }
 
       closeMe = (e) => {

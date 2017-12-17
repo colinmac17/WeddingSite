@@ -145,13 +145,13 @@ class RSVP extends Component {
                     <Input value={this.state.lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                     <Input value={this.state.email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
                     <Input value={this.state.foodchoice} onChange={this.onChange} type='select' name="foodchoice" label="Food Choice" required>
-                        <option value='-1' disabled selected>Select Meal</option>
+                        <option value='-1'selected>-----</option>
                         <option value='1'>Option 1</option>
                         <option value='2'>Option 2</option>
                         <option value='3'>Option 3</option>
                     </Input>
                     <Input value={this.state.rsvp} onChange={this.onChange} name='rsvp' type='select' label='Coming?' required>
-                        <option value='-1' disabled selected>Select RSVP</option>
+                        <option value='-1'selected>-----</option>
                         <option value='1'>Yes</option>
                         <option value='0'>No</option>
                     </Input>

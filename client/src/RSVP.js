@@ -52,6 +52,7 @@ class RSVP extends Component {
             database.ref(`/guests/${firstname} ${lastname}`).push({
                 firstname: firstname,
                 lastname: lastname,
+                email: email,
                 foodchoice: foodchoice,
                 rsvp: rsvp
             },((err) => {

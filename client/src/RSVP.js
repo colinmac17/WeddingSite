@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Title, RSVPMessage } from './Styles';
 import { Row, Input, Button } from 'react-materialize';
 import firebase from 'firebase';
+import $ from 'jquery';
 
 const config = {
     apiKey: "AIzaSyAO0VQFLcNWiGgH7fLz49qN6GpwCOfF6qk",
@@ -40,9 +41,11 @@ class RSVP extends Component {
     componentDidMount(){
         let aaGuestNames;
         database.ref().on('value', (snapshot) => {
-            const oGuests = snapshot.val().guests;
-            aaGuestNames = Object.keys(oGuests);
-            this.setState({aaGuestNames: aaGuestNames})
+            if(snapshot.val() != null){
+                const oGuests = snapshot.val().guests;
+                aaGuestNames = Object.keys(oGuests);
+                this.setState({aaGuestNames: aaGuestNames})
+            }
         });
     }
 
@@ -76,12 +79,13 @@ class RSVP extends Component {
                         this.setState({showErrMessage: true })
                     }
                     if(!err){
-                        this.setState({ showMessage: true })
+                        this.setState({ showMessage: true, guest:{firstname: '', lastname: '', email: '', rsvp: false, foodchoice: '' }})
                     }
                 }));
       }
 
       handleButtonClick = (e) => {
+          this.resetForm();
         const { firstname, lastname, foodchoice, rsvp, email } = this.state.guest;
         e.preventDefault();
 
@@ -99,6 +103,14 @@ class RSVP extends Component {
             this.setState({showHelpMessage: true}) 
          }
         }
+      }
+
+      resetForm(){
+          $('input[name="firstname"]').val('');
+          $('input[name="lastname"]').val('');
+          $('input[name="email"]').val('');
+          $('input[name="rsvp"] option[value="-1"]').prop('selected', true);
+          $('input[name="foodchoice"] option[value="-1"]').prop('selected', true);
       }
 
       closeMe = (e) => {
@@ -127,27 +139,27 @@ class RSVP extends Component {
                     </RSVPMessage> : ''}
 
             <Title>RSVP Online</Title>
-            <Row>
-                <form id="rsvpForm">
-                    <Input onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" required/>
-                    <Input onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" required/>
-                    <Input onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" required/>
-                    <Input onChange={this.onChange} type='select' name="foodchoice" label="Food Choice" required>
+            <form id="rsvpForm" ref="form" onSubmit={this.handleButtonClick}>
+                <Row>
+                    <Input value={this.state.firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
+                    <Input value={this.state.lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
+                    <Input value={this.state.email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
+                    <Input value={this.state.foodchoice} onChange={this.onChange} type='select' name="foodchoice" label="Food Choice" required>
                         <option value='-1' disabled selected>Select Meal</option>
                         <option value='1'>Option 1</option>
                         <option value='2'>Option 2</option>
                         <option value='3'>Option 3</option>
                     </Input>
-                    <Input onChange={this.onChange} name='rsvp' type='select' label='Coming?' required>
+                    <Input value={this.state.rsvp} onChange={this.onChange} name='rsvp' type='select' label='Coming?' required>
                         <option value='-1' disabled selected>Select RSVP</option>
                         <option value='1'>Yes</option>
                         <option value='0'>No</option>
                     </Input>
-                </form>
-            </Row>
-            <Row>
-                <Button onClick={this.handleButtonClick} type="submit" waves='light'>Submit RSVP</Button>
-            </Row>
+                </Row>
+                <Row>
+                    <Button type="submit" waves='light'>Submit RSVP</Button>
+                </Row>
+            </form>
         </div>
     )
   }

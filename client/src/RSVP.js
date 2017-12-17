@@ -28,7 +28,7 @@ class RSVP extends Component {
                 rsvp: false
             },
             message: 'Thank you for submitting your rsvp!',
-            helpMessage: 'Please fill ouy all fields!',
+            helpMessage: 'Please fill out all fields!',
             errMessage: 'You have either already RSVPED or there was an internal server error on our end, please contact me at colin.g.mcatee@gmail.com for assistance or to submit your RSVP!',
             showMessage: false,
             showErrMessage: false,

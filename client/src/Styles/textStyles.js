@@ -47,3 +47,16 @@ export const Countdown = styled.p`
     font-weight: 700;
     color: ${props => props.color};
 `
+
+export const HotelTitle = styled.span`
+    font-weight: 900;
+    text-decoration: underline;
+`
+
+export const RSVPMessage = styled.div`
+    padding: 20px;
+    background-color: ${props => props.background};
+    border-radius: 5px;
+    color: ${props => props.color};
+    font-weight: 900;
+`

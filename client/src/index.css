@@ -54,6 +54,10 @@ p {
   font-family: 'Noto Serif', serif;
 }
 
+#rsvp {
+  padding-bottom: 30px;
+}
+
 
 .details-li .bold {
   font-weight: 900;

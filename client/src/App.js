@@ -10,7 +10,7 @@ class App extends Component {
       <div className="container main" id="home">
       <Row>
         <Col m={6} xs={12}>
-          <MediaBox className="responsive-img valign-wrapper box-img" src="http://res.cloudinary.com/soccerresume/image/upload/v1511554305/10849051_10152960174027474_4471679024365864095_o_tgsrne.jpg" caption="Pregaming Michigan v Maryland, November, 2014" height="600" width="600"/>
+          <MediaBox className="responsive-img valign-wrapper box-img" src="https://res.cloudinary.com/soccerresume/image/upload/v1511554305/10849051_10152960174027474_4471679024365864095_o_tgsrne.jpg" caption="Pregaming Michigan v Maryland, November, 2014" height="600" width="600"/>
         </Col>
         <Col m={6} xs={12}>
           <SmallTitle>Our Story</SmallTitle>
@@ -21,8 +21,8 @@ class App extends Component {
       <br/><br/>
       <Row>
         <Col m={6} xs={12}>
-          <MediaBox className="responsive-img valign-wrapper box-img" src="http://res.cloudinary.com/soccerresume/image/upload/v1511554307/21752502_10155837533852474_4771846688139704683_o_typxmo.jpg" caption="Proposing to Kelsey on the Maria Plains, Salzburg, Austria, September 15, 2017" height="700" width="600"/>
-          <MediaBox className="responsive-img valign-wrapper box-img" src="http://res.cloudinary.com/soccerresume/image/upload/v1511554307/21762193_10211133985798000_6311107113758367325_n_oqrh5c.jpg" caption="Just after the big moment, all smiles!" height="600" width="600"/>
+          <MediaBox className="responsive-img valign-wrapper box-img" src="https://res.cloudinary.com/soccerresume/image/upload/v1511554307/21752502_10155837533852474_4771846688139704683_o_typxmo.jpg" caption="Proposing to Kelsey on the Maria Plains, Salzburg, Austria, September 15, 2017" height="700" width="600"/>
+          <MediaBox className="responsive-img valign-wrapper box-img" src="https://res.cloudinary.com/soccerresume/image/upload/v1511554307/21762193_10211133985798000_6311107113758367325_n_oqrh5c.jpg" caption="Just after the big moment, all smiles!" height="600" width="600"/>
         </Col>
         <Col m={6} xs={12}>
           <SmallTitle>The Proposal</SmallTitle>
@@ -33,7 +33,7 @@ class App extends Component {
       <br/><br/>
       <Row>
         <Col m={6} xs={12}>
-          <img className="responsive-img" src="http://res.cloudinary.com/soccerresume/image/upload/v1511557323/pergola_w9qf8o.jpg"/>
+          <img className="responsive-img" src="https://res.cloudinary.com/soccerresume/image/upload/v1511557323/pergola_w9qf8o.jpg"/>
         </Col>
         <Col m={6} xs={12}>
           <SmallTitle>The Wedding</SmallTitle>

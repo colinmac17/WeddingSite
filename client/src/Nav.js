@@ -27,7 +27,7 @@ const Nav = () => {
             </NavLinks>
                 <Row>
                     <Col xs={12}>
-                        <img className="responsive-img" src="http://res.cloudinary.com/soccerresume/image/upload/v1511554306/19466684_10155367133154471_1051912402270484828_o_sfrnfb.jpg" />
+                        <img className="responsive-img" src="https://res.cloudinary.com/soccerresume/image/upload/v1511554306/19466684_10155367133154471_1051912402270484828_o_sfrnfb.jpg" />
                     </Col>
                 </Row>
                 <RemainingDays/>

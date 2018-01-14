@@ -35,6 +35,8 @@ body {
   border: 10px solid snow;
   padding: 20px;
   margin-bottom: 20px;
+  background: snow;
+  border-radius: 10px;
 }
 
 .carousel-item img {
@@ -42,7 +44,8 @@ body {
 }
 
 .carousel {
- box-shadow: 0 5px 5px 5px slategray;
+  background: snow;
+  border-radius: 5px;
 }
 
 .details ul li {
@@ -82,7 +85,10 @@ p {
 .details-li .bold {
   font-weight: 900;
   padding: 5px;
-  border: 1px solid #3e3e3e;
+}
+
+#registry h1, #photos h1, #rsvp h1 {
+  text-align: center;
 }
 
 @media screen and (max-width:900px) {
@@ -103,7 +109,7 @@ p {
     font-size: 40px;
   }
   .nav-links{
-    font-size: 14px;
+    font-size: 20px;
     padding: 0px;
     margin: -5px;
   }
@@ -119,13 +125,18 @@ p {
 
 @media screen and (max-width:400px) {
   .nav-links{
-    font-size: 12px;
+    font-size: 18px;
+  }
+
+  .map {
+    width: 300px;
+    height: 300px;
   }
 }
 
 @media screen and (max-width:360px) {
   .nav-links{
-    font-size: 12px;
+    font-size: 16px;
     margin: -10px;
     padding: -5px;
   }

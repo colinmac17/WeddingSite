@@ -3,9 +3,8 @@ import { Title } from './Styles';
 
 const Register = () => {
     return (
-        <div className="container register" id="registry">
-            <Title>Registry (Coming Soon)</Title>
-            <p>This page is under development</p>
+        <div className="container register text-center" id="registry">
+            <Title className="text-center">Registry (Coming Soon)</Title>
         </div>
     )
 }

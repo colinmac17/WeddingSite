@@ -3,7 +3,7 @@ import { Title, SmallTitle, DetailTitle } from './Styles';
 import { Row, Col } from 'react-materialize';
 import Map from './Map';
 
-const details = ['Location: Chicago, IL', 'Venue: Galleria Marchetti', 'Date: Saturday June 16, 2018', 'Time: 430 - 11PM CST', 'Food: Italian' , 'Beverage: Open Bar', 'Dancing to follow'];
+const details = ['Location:- Chicago, IL', 'Venue:- Galleria Marchetti', 'Date:- Saturday June 16, 2018', 'Time:- 430 - 11PM CST', 'Food:- Italian' , 'Beverage:- Open Bar', 'Dancing to follow'];
 
 const detailList = details.map((detail, idx) => {
     const detailArray = detail.split(':');

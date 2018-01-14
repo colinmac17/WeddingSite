@@ -18,6 +18,7 @@ font-family: 'Libre Baskerville', serif;
 margin: 5px;
 text-decoration: none;
 background-color: ${props => props.color};
+font-family: 'Midnight', cursive;
 `;
 
 export const BackToTop = styled.button`

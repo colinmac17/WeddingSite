@@ -19,10 +19,10 @@ const Nav = () => {
             <DateOfWedding color="#3e3e3e">06/16/2018</DateOfWedding>
             <div id="nav-container">
             <NavLinks clasName="nav-links-ul">
-                <NavLink color="transparent"><Link onClick={handleClick('#home')}className="nav-links hoverable" to="/">Home</Link></NavLink>
-                <NavLink color="transparent"><Link onClick={handleClick('#details')}className="nav-links hoverable" to="/details">Details</Link></NavLink>
+                <NavLink color="transparent"><Link onClick={handleClick('#home')} className="nav-links hoverable" to="/">Home</Link></NavLink>
+                <NavLink color="transparent"><Link onClick={handleClick('#details')} className="nav-links hoverable" to="/details">Details</Link></NavLink>
                 <NavLink color="transparent"><Link onClick={handleClick('#photos')} className="nav-links hoverable" to="/photos">Photos</Link></NavLink>
-                <NavLink color="transparent"><Link onClick={handleClick('#rsvp')} className="nav-links hoverable" to="/rsvp">RSVP</Link></NavLink>
+                {/* <NavLink color="transparent"><Link onClick={handleClick('#rsvp')} className="nav-links hoverable" to="/rsvp">RSVP</Link></NavLink> */}
                 <NavLink color="transparent"><Link onClick={handleClick('#registry')} className="nav-links hoverable" to="/registry">Registry</Link></NavLink>
             </NavLinks>
                 <Row>

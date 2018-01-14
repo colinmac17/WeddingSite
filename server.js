@@ -2,16 +2,11 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
-require('dotenv').config();
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-
-// setInterval(function() {
-//   http.get("http://colinandkelsey.herokuapp.com");
-// }, 1500000); // every 25 minutes (300000)
 
 // Send every request to the React app
 // Define any API routes before this runs

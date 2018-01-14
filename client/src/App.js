@@ -10,7 +10,7 @@ class App extends Component {
       <div className="container main" id="home">
       <Row>
         <Col m={6} xs={12}>
-          <MediaBox className="responsive-img valign-wrapper box-img" src="http://res.cloudinary.com/soccerresume/image/upload/v1511554305/10849051_10152960174027474_4471679024365864095_o_tgsrne.jpg" caption="Wine Tasting at Chateau Chantal in Traverse City Michigan, Summer 2017" height="600" width="600"/>
+          <MediaBox className="responsive-img valign-wrapper box-img" src="http://res.cloudinary.com/soccerresume/image/upload/v1511554305/10849051_10152960174027474_4471679024365864095_o_tgsrne.jpg" caption="Pregaming Michigan v Maryland, November, 2014" height="600" width="600"/>
         </Col>
         <Col m={6} xs={12}>
           <SmallTitle>Our Story</SmallTitle>

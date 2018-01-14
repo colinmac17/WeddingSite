@@ -1,7 +1,27 @@
+@font-face {
+  font-family: Mottona;
+  src: url('./fonts/mottona.otf') format("truetype");
+}
+
+@font-face {
+  font-family: Mottona;
+  src: url('./fonts/midnight.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: Storybook;
+  src: url('./fonts/storybook.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: Awesome;
+  src: url('./fonts/awesome.ttf') format("truetype");
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Awesome';
   background-color: snow;
   background: url('./images/subtle_white_feathers.png');
 }
@@ -29,7 +49,7 @@ body {
   font-size: 20px; 
   letter-spacing: 3px;  
   padding: 5px;
-  font-family: 'Noto Serif', serif;
+  font-family: 'Awesome';
   margin-top: 10px;
 }
 
@@ -51,7 +71,7 @@ body {
 }
 
 p {
-  font-family: 'Noto Serif', serif;
+  font-family: 'Awesome', serif;
 }
 
 #rsvp {

@@ -33,7 +33,7 @@ const Details = () => {
                 </Col>
             </Row>
             <Row>
-                <SmallTitle>Accomadations <i className="fa fa-bed" aria-hidden="true"></i></SmallTitle>
+                <SmallTitle>Accommodations <i className="fa fa-bed" aria-hidden="true"></i></SmallTitle>
                 <Col s={12}>
                     <ul>
                         <li><DetailTitle>Courtyard Marriott River North/Downtown</DetailTitle> - <a href="http://www.marriott.com/meeting-event-hotels/group-corporate-travel/groupCorp.mi?resLinkData=Kelsey%20Kippe%20Colin%20McAtee%20Wedding%20Block%20%5Echiwb%60KMCKMCB%60219%60USD%60false%604%606/15/18%606/17/18%6005/25/18&app=resvlink&stop_mobi=yes" target="_blank">Book</a> <br/>
@@ -47,7 +47,7 @@ const Details = () => {
             <SmallTitle>Places to Eat <i className="fa fa-cutlery" aria-hidden="true"></i></SmallTitle>
                 <Col s={12}>
                     <ul>
-                        <li>Here are a few of many amazing restaurants:</li>
+                        <li>Here are just a few of our favorite Chicago restaurants:</li>
                         <li>&bull; <a href="http://auchevalchicago.com/" target="_blank">Au Cheval</a> (Best Burger in Town)</li>
                         <li>&bull; <a href="http://3artsclubcafe.com/" target="_blank">Restoration Hardware</a> (Amazing for brunch and architecture)</li>
                         <li>&bull; <a href="http://www.happycamperchicago.com/" target="_blank">Happy Camper</a> (Fun atmosphere with great pizza and beer)</li>
@@ -63,7 +63,7 @@ const Details = () => {
                     <ul>
                         <li>Here are a handful of awesome things to do in Chicago:</li>
                         <li>&bull; Catch a <a href="https://www.mlb.com/cubs/tickets" target="_blank">Cubs Game</a> at Wrigley Field</li>   
-                        <li>&bull; Lay out on the beach - Checkout Oak Street, North Ave, and Montrose</li>   
+                        <li>&bull; Lay out on the beach - check out Oak Street, North Ave, and Montrose</li>   
                         <li>&bull; Go see a <a href="http://www.broadwayinchicago.com/shows/" target="_blank">Broadway</a> play</li>   
                         <li>&bull; Take a walk through <a href="https://www.chicagoparkdistrict.com/parks-facilities/lincoln-park" target="_blank">Lincoln Park</a></li>   
                         <li>&bull; Check out <a href="https://navypier.org/" target="_blank">Navy Pier</a></li>   
@@ -77,13 +77,13 @@ const Details = () => {
                 <Col s={12}>
                     <SmallTitle>By Air <i className="fa fa-plane" aria-hidden="true"></i></SmallTitle>
                     <ul>
-                        <li><DetailTitle>O'hare International Airport (ORD)</DetailTitle> - <a href="http://www.flychicago.com/ohare/home/pages/default.aspx" target="_blank">Details</a> <br/>
+                        <li><DetailTitle>O'Hare International Airport (ORD)</DetailTitle> - <a href="http://www.flychicago.com/ohare/home/pages/default.aspx" target="_blank">Details</a> <br/>
                         &bull; Chicago's largest airport, located about 15 miles northwest of downtown.<br/>
-                        &bull; A United hub. Delta, American and pretty much any other airline you can think of fly here.<br/>
+                        &bull; A United hub. Most airlines fly here.<br/>
                         &bull; 10000 W O'Hare Ave, Chicago, IL 60666</li> 
                         <li><DetailTitle>Midway International Airport (MDW)</DetailTitle> - <a href="http://www.flychicago.com/midway/home/pages/default.aspx" target="_blank">Details</a><br/>
                         &bull; Chicago's second largest airport is located about 15 miles southwest of downtown.<br/>  
-                        &bull; Southwest's only airport in Chicago.<br/>
+                        &bull; The only airport that Southwest Airlines flys to.<br/>
                         &bull; 5700 S Cicero Ave, Chicago, IL 60638</li>   
                     </ul>
                     <SmallTitle>By Train <i className="fa fa-train" aria-hidden="true"></i></SmallTitle>
@@ -94,7 +94,7 @@ const Details = () => {
                         &bull; 210 S Canal St, Chicago, IL 60606</li> 
                         <li><DetailTitle>South Shore Line to Millenium Station</DetailTitle> - <a href="http://www.mysouthshoreline.com/" target="_blank">Details</a><br/>
                         &bull; Midwest train line that runs from South Bend, IN to Chicago.<br/>  
-                        &bull; Cheaper, and great option if you are driving in and want to drop off your car and hop on at Michigan City.<br/>
+                        &bull; Cheaper, and a great option if you are driving in and want to drop off your car and hop on at Michigan City.<br/>
                         &bull; 151 N Michigan Ave, Chicago, IL 60602</li>  
                     </ul>
                 </Col>

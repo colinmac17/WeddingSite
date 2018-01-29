@@ -16,7 +16,7 @@ const Nav = () => {
     return (
         <div className="container nav">
             <MainTitle className="center-align colin-and-kelsey"><Link to="/" className="nav-links">Colin and Kelsey</Link></MainTitle>
-            <DateOfWedding color="#3e3e3e">06/16/2018</DateOfWedding>
+            <DateOfWedding color="#3e3e3e">June 16, 2018</DateOfWedding>
             <div id="nav-container">
             <NavLinks clasName="nav-links-ul">
                 <NavLink color="transparent"><Link onClick={handleClick('#home')} className="nav-links hoverable" to="/">Home</Link></NavLink>
@@ -27,7 +27,7 @@ const Nav = () => {
             </NavLinks>
                 <Row>
                     <Col xs={12}>
-                        <img className="responsive-img" src="https://res.cloudinary.com/soccerresume/image/upload/v1511554306/19466684_10155367133154471_1051912402270484828_o_sfrnfb.jpg"/>
+                        <img className="responsive-img" src="https://res.cloudinary.com/soccerresume/image/upload/v1517191903/KelseyColinEngagemen-449-min_ce1ayt.jpg"/>
                     </Col>
                 </Row>
                 <RemainingDays/>

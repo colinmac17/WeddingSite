@@ -10,7 +10,7 @@ const countdown = () => {
 
 const RemainingDays = () => {
     return (
-        <Countdown color="#3e3e3e" className="center-align">{countdown()} days remaining!</Countdown>
+        <Countdown color="#3e3e3e" className="center-align">{countdown()} Days Remaining!</Countdown>
     )
 }
 

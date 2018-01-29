@@ -1,21 +1,41 @@
 @font-face {
-  font-family: Mottona;
+  font-family: 'Mottona';
   src: url('./fonts/mottona.otf') format("truetype");
 }
 
 @font-face {
-  font-family: Mottona;
+  font-family: 'Midnight';
   src: url('./fonts/midnight.ttf') format("truetype");
 }
 
 @font-face {
-  font-family: Storybook;
+  font-family: 'Storybook';
   src: url('./fonts/storybook.ttf') format("truetype");
 }
 
 @font-face {
-  font-family: Awesome;
+  font-family: 'Awesome';
   src: url('./fonts/awesome.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Luna';
+  src: url('./fonts/Luna.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Bromello';
+  src: url('./fonts/bromello.otf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Good Vibes';
+  src: url('./fonts/goodvibes.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Shorelines Script Bold';
+  src: url('./fonts/shorelines.otf') format("truetype");
 }
 
 body {
@@ -77,8 +97,17 @@ p {
   font-family: 'Awesome', serif;
 }
 
+.register-links p, #photos p {
+  font-size: 20px;
+  text-align: center;
+}
+
 #rsvp {
   padding-bottom: 30px;
+}
+
+#proposalPic {
+  margin-top: 150px;
 }
 
 
@@ -91,6 +120,10 @@ p {
   text-align: center;
 }
 
+#registry {
+  padding-bottom: 50px;
+}
+
 @media screen and (max-width:900px) {
   .map {
     width: 700px;
@@ -101,6 +134,9 @@ p {
 @media screen and (max-width:740px) {
   .map {
     width: 600px;
+  }
+  #proposalPic {
+    margin-top: 0px;
   }
 }
 

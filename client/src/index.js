@@ -8,6 +8,7 @@ import RSVP from './RSVP';
 import Register from './Register';
 import Photos from './Photos'
 import Guests from './Guests';
+import Comments from './Comments';
 import { BackToTop } from './Styles';
 import './index.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
@@ -32,8 +33,9 @@ const Root = (props) => {
                     <Route exact path="/photos" component={Photos}/>
                     <Route exact path="/registry" component={Register}/>
                     <Route exact path="/rsvp" component={RSVP}/>
-                    <Route exact path="/guests" component={Guests}/>
-                    <Route component={NotFound}/>
+                    <Route exact path="/comments" component={Comments}/>
+                    {/*<Route exact path="/guests" component={Guests}/>
+    <Route component={NotFound}/>*/}
                 </Switch>
                 {/*<div className="center-align" onClick={handleClick('.nav')}>
                     <BackToTop>Back To top</BackToTop>

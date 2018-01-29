@@ -5,6 +5,7 @@ list-style: none;
 margin: 0;
 padding: 20px;
 text-align: center;
+font-family: 'Bromello', cursive !important;
 `;
 
 export const NavLink = styled.span`
@@ -14,11 +15,10 @@ font-size: 20px;
 border-radius: 3px;
 transition: all 0.3s ease;
 color: #3e3e3e;
-font-family: 'Libre Baskerville', serif;
 margin: 5px;
 text-decoration: none;
 background-color: ${props => props.color};
-font-family: 'Midnight', cursive;
+font-family: 'Bromello', cursive !important;
 `;
 
 export const BackToTop = styled.button`

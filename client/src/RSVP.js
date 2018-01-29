@@ -3,17 +3,9 @@ import { Title, RSVPMessage } from './Styles';
 import { Row, Input, Button } from 'react-materialize';
 import firebase from 'firebase';
 import $ from 'jquery';
+import Config from './Config';
 
-const config = {
-    apiKey: "AIzaSyAO0VQFLcNWiGgH7fLz49qN6GpwCOfF6qk",
-    authDomain: "colin-and-kelsey.firebaseapp.com",
-    databaseURL: "https://colin-and-kelsey.firebaseio.com",
-    projectId: "colin-and-kelsey",
-    storageBucket: "colin-and-kelsey.appspot.com",
-    messagingSenderId: "1077558573636"
-  };
-
-  firebase.initializeApp(config);
+  firebase.initializeApp(Config);
 
   const database = firebase.database();
 
@@ -141,16 +133,16 @@ class RSVP extends Component {
             <Title>RSVP Online</Title>
             <form id="rsvpForm" ref="form" onSubmit={this.handleButtonClick}>
                 <Row>
-                    <Input value={this.state.firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
-                    <Input value={this.state.lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
-                    <Input value={this.state.email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
-                    <Input value={this.state.foodchoice} onChange={this.onChange} type='select' name="foodchoice" label="Food Choice" required>
+                    <Input value={this.state.guestfirstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
+                    <Input value={this.state.guestlastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
+                    <Input value={this.state.guestemail} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
+                    <Input value={this.state.guestfoodchoice} onChange={this.onChange} type='select' name="foodchoice" label="Food Choice" required>
                         <option value='-1'selected>-----</option>
                         <option value='1'>Option 1</option>
                         <option value='2'>Option 2</option>
                         <option value='3'>Option 3</option>
                     </Input>
-                    <Input value={this.state.rsvp} onChange={this.onChange} name='rsvp' type='select' label='Coming?' required>
+                    <Input value={this.state.guest.rsvp} onChange={this.onChange} name='rsvp' type='select' label='Coming?' required>
                         <option value='-1'selected>-----</option>
                         <option value='1'>Yes</option>
                         <option value='0'>No</option>

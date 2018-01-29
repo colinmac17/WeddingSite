@@ -1,11 +1,15 @@
 {
-  "main.css": "static/css/main.697bcf87.css",
-  "main.css.map": "static/css/main.697bcf87.css.map",
-  "main.js": "static/js/main.9b201bf7.js",
-  "main.js.map": "static/js/main.9b201bf7.js.map",
+  "main.css": "static/css/main.685fae96.css",
+  "main.css.map": "static/css/main.685fae96.css.map",
+  "main.js": "static/js/main.c75ae9d3.js",
+  "main.js.map": "static/js/main.c75ae9d3.js.map",
+  "static/media/Luna.ttf": "static/media/Luna.05ae92e3.ttf",
   "static/media/awesome.ttf": "static/media/awesome.cf2cbdf4.ttf",
+  "static/media/bromello.otf": "static/media/bromello.2d584f30.otf",
+  "static/media/goodvibes.ttf": "static/media/goodvibes.6c05287a.ttf",
   "static/media/midnight.ttf": "static/media/midnight.1e217b1b.ttf",
   "static/media/mottona.otf": "static/media/mottona.f86cc7fd.otf",
   "static/media/seamless_paper_texture.png": "static/media/seamless_paper_texture.38ee88a2.png",
+  "static/media/shorelines.otf": "static/media/shorelines.8bcddf1a.otf",
   "static/media/storybook.ttf": "static/media/storybook.70184b1e.ttf"
 }

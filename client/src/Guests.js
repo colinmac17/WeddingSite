@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Title } from './Styles';
 import firebase from 'firebase';
+import * as dateformat from 'dateformat';
 
 const database = firebase.database();
 
@@ -13,7 +14,6 @@ class Guests extends Component {
     }   
 
     componentWillMount(){
-        let aaGuestNames;
         database.ref().on('value', (snapshot) => {
             if(snapshot.val() != null){
                 let firstname, lastname, email, rsvp, foodchoice, aaGuestObjs, aaGuests, data, guests, date;
@@ -48,7 +48,7 @@ class Guests extends Component {
         let monthIndex = date.getMonth()
         let year = date.getFullYear()
 
-        return `${monthIndex + 1}/${day}/${year}`
+        return dateformat(date, "mm/dd/yy h:MM:ss TT Z")
       }
 
 

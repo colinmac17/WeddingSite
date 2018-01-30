@@ -3,6 +3,7 @@ import { Title, RSVPMessage } from './Styles';
 import { Row, Input, Button } from 'react-materialize';
 import firebase from 'firebase';
 import $ from 'jquery';
+import * as dateformat from 'dateformat';
 
 
 const database = firebase.database();
@@ -103,11 +104,12 @@ class Comments extends Component {
       renderDate = (timestring) => {
        
         let date = new Date(timestring)
+        
         let day = date.getDate()
         let monthIndex = date.getMonth()
         let year = date.getFullYear()
 
-        return `${monthIndex + 1}/${day}/${year}`
+        return dateformat(date, "mm/dd/yy h:MM:ss TT Z")
       }
 
     render() {

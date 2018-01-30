@@ -116,11 +116,42 @@ p {
   padding: 5px;
 }
 
+.comments, .guests {
+  margin-top: 15px;
+  padding: 15px;
+}
+
+.comment-form {
+  border: 3px solid #3e3e3e;
+  padding: 25px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.comment .date, .guests .date {
+  color: #3e3e3e;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.comment h5, .guests h5 {
+  color: #01b0f0;
+}
+
+.comment p, .guests p {
+  font-size: 16px;
+}
+
+.guests .coming {
+  color: #01b0f0;
+  text-transform: uppercase;
+}
+
 #registry h1, #photos h1, #rsvp h1 {
   text-align: center;
 }
 
-#registry {
+#registry, #comments {
   padding-bottom: 50px;
 }
 
@@ -145,7 +176,7 @@ p {
     font-size: 40px;
   }
   .nav-links{
-    font-size: 20px;
+    font-size: 18px;
     padding: 0px;
     margin: -5px;
   }
@@ -161,7 +192,7 @@ p {
 
 @media screen and (max-width:400px) {
   .nav-links{
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .map {

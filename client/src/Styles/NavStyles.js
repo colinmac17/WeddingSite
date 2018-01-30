@@ -11,7 +11,7 @@ font-family: 'Bromello', cursive !important;
 export const NavLink = styled.span`
 padding: 5px 8px;
 padding-bottom: 20px;
-font-size: 20px;
+font-size: 18px;
 border-radius: 3px;
 transition: all 0.3s ease;
 color: #3e3e3e;

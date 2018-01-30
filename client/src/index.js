@@ -34,8 +34,8 @@ const Root = (props) => {
                     <Route exact path="/registry" component={Register}/>
                     <Route exact path="/rsvp" component={RSVP}/>
                     <Route exact path="/comments" component={Comments}/>
-                    {/*<Route exact path="/guests" component={Guests}/>
-    <Route component={NotFound}/>*/}
+                    <Route exact path="/guests" component={Guests}/>
+    <Route component={NotFound}/>
                 </Switch>
                 {/*<div className="center-align" onClick={handleClick('.nav')}>
                     <BackToTop>Back To top</BackToTop>

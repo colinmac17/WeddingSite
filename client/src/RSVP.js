@@ -41,14 +41,6 @@ class RSVP extends Component {
         });
     }
 
-    validateForm(firstname, lastname) {
-        this.state.aaGuestNames.forEach((name) => {
-            if(`${firstname.toLowerCase()} ${lastname.toLowerCase()}` == name){
-                return false
-            }
-        });
-    }
-
     onChange = (e) => {
         const guest = this.state.guest
         const field = e.target.name
@@ -59,12 +51,14 @@ class RSVP extends Component {
       }
 
       submitToFirebase(firstname ,lastname, foodchoice, rsvp, email) {
-                database.ref(`/guests/${firstname.toLowerCase()} ${lastname.toLowerCase()}`).push({
+          let firebase = require('firebase');
+                database.ref(`/guests/`).push({
                     firstname: firstname.toLowerCase(),
                     lastname: lastname.toLowerCase(),
                     email: email.toLowerCase(),
                     foodchoice: foodchoice,
-                    rsvp: rsvp
+                    rsvp: rsvp,
+                    date: firebase.database.ServerValue.TIMESTAMP
                 },((err) => {
                     if(err){
                         console.log(err);

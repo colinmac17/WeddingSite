@@ -23,7 +23,7 @@ const Nav = () => {
                 <NavLink color="transparent"><Link onClick={handleClick('#details')} className="nav-links hoverable" to="/details">Details</Link></NavLink>
                 <NavLink color="transparent"><Link onClick={handleClick('#photos')} className="nav-links hoverable" to="/photos">Photos</Link></NavLink>
                 <NavLink color="transparent"><Link onClick={handleClick('#comments')} className="nav-links hoverable" to="/comments">Comments</Link></NavLink>
-                {/* <NavLink color="transparent"><Link onClick={handleClick('#rsvp')} className="nav-links hoverable" to="/rsvp">RSVP</Link></NavLink> */}
+                <NavLink color="transparent"><Link onClick={handleClick('#rsvp')} className="nav-links hoverable" to="/rsvp">RSVP</Link></NavLink>
                 <NavLink color="transparent"><Link onClick={handleClick('#registry')} className="nav-links hoverable" to="/registry">Registry</Link></NavLink>
             </NavLinks>
                 <Row>

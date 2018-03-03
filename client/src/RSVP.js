@@ -20,8 +20,8 @@ class RSVP extends Component {
                 email: '',
                 rsvp: false
             },
-            message: 'Thank you for submitting your rsvp!',
-            helpMessage: 'Please fill out all fields!',
+            message: 'Thank you for submitting your RSVP!',
+            helpMessage: 'Please fill out all fields and make sure to select a valid food and rsvp option!',
             errMessage: 'You have either already RSVPED or there was an internal server error on our end, please contact me at colin.g.mcatee@gmail.com for assistance or to submit your RSVP!',
             showMessage: false,
             showErrMessage: false,
@@ -32,11 +32,15 @@ class RSVP extends Component {
 
     componentDidMount(){
         let aaGuestNames;
+        let bUndefined = false
         database.ref().on('value', (snapshot) => {
             if(snapshot.val() != null){
                 const oGuests = snapshot.val().guests;
-                aaGuestNames = Object.keys(oGuests);
-                this.setState({aaGuestNames: aaGuestNames})
+                if(oGuests){
+                    aaGuestNames = Object.keys(oGuests);
+                }
+                if(typeof aaGuestNames === 'undefined') bUndefined = true
+                this.setState({aaGuestNames: bUndefined ? [] : aaGuestNames})
             }
         });
     }
@@ -71,19 +75,21 @@ class RSVP extends Component {
       }
 
       handleButtonClick = (e) => {
-          this.resetForm();
         const { firstname, lastname, foodchoice, rsvp, email } = this.state.guest;
         e.preventDefault();
 
         let fullName = firstname.toLowerCase() + ' ' + lastname.toLowerCase()
         let inValidNames = []
-        this.state.aaGuestNames.forEach(name => {
-            if(name == fullName) inValidNames.push(name);
-        });
+        if(this.state.aaGuestNames.length > 0){
+            this.state.aaGuestNames.forEach(name => {
+                if(name == fullName) inValidNames.push(name);
+            });
+        }
         
         if(inValidNames.length > 0) this.setState({showErrMessage: true})
         else {
-        if(firstname.length > 0 && lastname.length > 0 && email.length > 0){
+        if(firstname.length > 0 && lastname.length > 0 && email.length > 0 && $('select[name="foodchoice"]').val() != -1 && $('select[name="rsvp"]').val() != -1){
+            this.resetForm();
             this.submitToFirebase(firstname, lastname, foodchoice, rsvp, email);
          } else {
             this.setState({showHelpMessage: true}) 
@@ -132,11 +138,11 @@ class RSVP extends Component {
                     <Input value={this.state.guestemail} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
                     <Input value={this.state.guestfoodchoice} onChange={this.onChange} type='select' name="foodchoice" label="Food Choice" required>
                         <option value='-1'selected>-----</option>
-                        <option value='1'>Option 1</option>
-                        <option value='2'>Option 2</option>
-                        <option value='3'>Option 3</option>
+                        <option value='chicken'>Chicken</option>
+                        <option value='beef'>Beef</option>
+                        <option value='vegetarian'>Eggplant Parmesean (V)</option>
                     </Input>
-                    <Input value={this.state.guest.rsvp} onChange={this.onChange} name='rsvp' type='select' label='Coming?' required>
+                    <Input value={this.state.guest.rsvp} onChange={this.onChange} name='rsvp' type='select' label='Attending?' required>
                         <option value='-1'selected>-----</option>
                         <option value='1'>Yes</option>
                         <option value='0'>No</option>

@@ -48,7 +48,7 @@ class Guests extends Component {
         let monthIndex = date.getMonth()
         let year = date.getFullYear()
 
-        return dateformat(date, "mm/dd/yy h:MM:ss TT Z")
+        return dateformat(date, "mm/dd/yy h:MM TT Z")
       }
 
 
@@ -59,7 +59,7 @@ class Guests extends Component {
                <div className="row guests">
                 {this.state.aaGuests.map((guest, idx)=> {
                    return (
-                    <div className="comment" key={guest.date}>
+                    <div className="comment" key={idx}>
                         <h5>{guest.firstname} {guest.lastname} <span className="date"> Rsvped <span className="coming">{(guest.rsvp == 1) ? 'yes' : 'no'}</span> on {this.renderDate(guest.date)}</span></h5>
                         <p>Email: {guest.email}</p>
                         <p>FoodChoice: {guest.foodchoice}</p>

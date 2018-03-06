@@ -58,23 +58,35 @@ class RSVP extends Component {
             showMessage: false,
             showErrMessage: false,
             showHelpMessage: false,
-            aaGuestNames: [],
+            aaGuests: [],
             showGuestMessage: false,
             guestMessage: 'You can add a max of 5 guests at a time. If you are RSVPing for more than 5 guests, please fill out the form again.'
         }
     }
 
-    componentDidMount(){
-        let aaGuestNames;
-        let bUndefined = false
+    componentWillMount(){
         database.ref().on('value', (snapshot) => {
             if(snapshot.val() != null){
-                const oGuests = snapshot.val().guests;
-                if(oGuests){
-                    aaGuestNames = Object.keys(oGuests);
+                let firstname, lastname, email, rsvp, foodchoice, aaGuestObjs, aaGuests, data, guests, date;
+                aaGuests = [];
+                data = snapshot.val()
+                guests = data.guests
+                if(snapshot.val().guests){
+                    const oGuests = snapshot.val().guests;
+                    if(Object.keys(oGuests).length > 0){
+                        aaGuestObjs = Object.keys(oGuests);
+                        aaGuestObjs.forEach((guest) => {
+                            firstname = guests[guest].firstname;
+                            lastname = guests[guest].lastname;
+                            email = guests[guest].email;
+                            rsvp = guests[guest].rsvp;
+                            foodchoice = guests[guest].foodchoice
+                            date = guests[guest].date
+                            aaGuests.push({firstname: firstname, lastname: lastname, email: email, foodchoice: foodchoice, rsvp: rsvp, date: date})
+                        });
+                        this.setState({aaGuests: aaGuests.reverse()})
+                    }
                 }
-                if(typeof aaGuestNames === 'undefined') bUndefined = true
-                this.setState({aaGuestNames: bUndefined ? [] : aaGuestNames})
             }
         });
     }
@@ -113,7 +125,6 @@ class RSVP extends Component {
                             <option value='1'>Yes</option>
                             <option value='0'>No</option>
                         </Input>
-                        <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                 </Row>
               )
               break;
@@ -135,7 +146,6 @@ class RSVP extends Component {
                             <option value='1'>Yes</option>
                             <option value='0'>No</option>
                         </Input>
-                        <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                 </Row>
                 <Row>
                 <Input data-guest="1" value={this.state.guests[1].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
@@ -152,9 +162,8 @@ class RSVP extends Component {
                         <option value='1'>Yes</option>
                         <option value='0'>No</option>
                     </Input>
-                    <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
-            </Row>
-            </Fragment>
+                </Row>
+                </Fragment>
               )
               break;
               case 3:
@@ -175,7 +184,6 @@ class RSVP extends Component {
                             <option value='1'>Yes</option>
                             <option value='0'>No</option>
                         </Input>
-                        <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                 </Row>
                 <Row>
                 <Input data-guest="1" value={this.state.guests[1].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
@@ -192,7 +200,6 @@ class RSVP extends Component {
                         <option value='1'>Yes</option>
                         <option value='0'>No</option>
                     </Input>
-                    <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                     </Row>
                         <Row>
                     <Input data-guest="2" value={this.state.guests[2].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
@@ -209,7 +216,6 @@ class RSVP extends Component {
                             <option value='1'>Yes</option>
                             <option value='0'>No</option>
                         </Input>
-                        <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                         </Row>
                   </Fragment>
               )
@@ -232,7 +238,6 @@ class RSVP extends Component {
                             <option value='1'>Yes</option>
                             <option value='0'>No</option>
                         </Input>
-                        <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                 </Row>
                 <Row>
                 <Input data-guest="1" value={this.state.guests[1].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
@@ -249,7 +254,6 @@ class RSVP extends Component {
                         <option value='1'>Yes</option>
                         <option value='0'>No</option>
                     </Input>
-                    <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                     </Row>
                         <Row>
                     <Input data-guest="2" value={this.state.guests[2].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
@@ -266,7 +270,6 @@ class RSVP extends Component {
                             <option value='1'>Yes</option>
                             <option value='0'>No</option>
                         </Input>
-                        <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                         </Row>
                         <Row>
                     <Input data-guest="3" value={this.state.guests[3].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
@@ -283,7 +286,6 @@ class RSVP extends Component {
                             <option value='1'>Yes</option>
                             <option value='0'>No</option>
                         </Input>
-                        <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                         </Row>
                   </Fragment>
               )
@@ -306,7 +308,6 @@ class RSVP extends Component {
                             <option value='1'>Yes</option>
                             <option value='0'>No</option>
                         </Input>
-                        <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                 </Row>
                 <Row>
                 <Input data-guest="1" value={this.state.guests[1].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
@@ -323,7 +324,6 @@ class RSVP extends Component {
                         <option value='1'>Yes</option>
                         <option value='0'>No</option>
                     </Input>
-                    <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                     </Row>
                         <Row>
                     <Input data-guest="2" value={this.state.guests[2].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
@@ -340,7 +340,6 @@ class RSVP extends Component {
                             <option value='1'>Yes</option>
                             <option value='0'>No</option>
                         </Input>
-                        <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                         </Row>
                         <Row>
                     <Input data-guest="3" value={this.state.guests[3].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
@@ -357,7 +356,6 @@ class RSVP extends Component {
                             <option value='1'>Yes</option>
                             <option value='0'>No</option>
                         </Input>
-                        <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                         </Row>
                         <Row>
                     <Input data-guest="4" value={this.state.guests[4].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
@@ -374,7 +372,6 @@ class RSVP extends Component {
                             <option value='1'>Yes</option>
                             <option value='0'>No</option>
                         </Input>
-                        <Button style={{background: 'red', marginBottom:'10px', padding: '-10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
                         </Row>
                   </Fragment>
               )
@@ -408,40 +405,69 @@ class RSVP extends Component {
                         this.setState({showErrMessage: true })
                     }
                     if(!err){
-                        this.setState({ showMessage: true, guest:{firstname: '', lastname: '', email: '', rsvp: false, foodchoice: '' }})
+                        this.setState({ showMessage: true})
                     }
                 }));
       }
 
       handleButtonClick = (e) => {
-        const { firstname, lastname, foodchoice, rsvp, email } = this.state.guest;
         e.preventDefault();
-
-        let fullName = firstname.toLowerCase() + ' ' + lastname.toLowerCase()
-        let inValidNames = []
-        if(this.state.aaGuestNames.length > 0){
-            this.state.aaGuestNames.forEach(name => {
-                if(name == fullName) inValidNames.push(name);
-            });
-        }
-        
-        if(inValidNames.length > 0) this.setState({showErrMessage: true})
-        else {
-        if(firstname.length > 0 && lastname.length > 0 && email.length > 0 && $('select[name="rsvp"]').val() != -1){
-            this.resetForm();
-            this.submitToFirebase(firstname, lastname, foodchoice, rsvp, email);
-         } else {
-            this.setState({showHelpMessage: true}) 
-         }
-        }
+        const { guests } = this.state
+        guests.forEach((oGuest, index) => {
+            if(index < this.state.guestCount){
+                const { firstname, lastname, foodchoice, rsvp, email } = oGuest;
+                if(firstname.length > 0 && lastname.length > 0 && email.length > 0 && $('select[name="rsvp"]').val() != -1){
+                    this.submitToFirebase(firstname, lastname, foodchoice, rsvp, email);
+                } else {
+                    this.setState({showHelpMessage: true}) 
+                }
+            }
+        })
+        this.resetForm();
       }
 
       resetForm(){
-          $('input[name="firstname"]').val('');
-          $('input[name="lastname"]').val('');
-          $('input[name="email"]').val('');
-          $('input[name="rsvp"] option[value="-1"]').prop('selected', true);
-          $('input[name="foodchoice"] option[value="-1"]').prop('selected', true);
+        document.getElementById('rsvpForm').reset();
+        this.setState({
+            guests:[
+                    {
+                    firstname: '',
+                    lastname: '',
+                    foodchoice: '',
+                    email: '',
+                    rsvp: false
+                },
+                {
+                    firstname: '',
+                    lastname: '',
+                    foodchoice: '',
+                    email: '',
+                    rsvp: false
+                },
+                {
+                    firstname: '',
+                    lastname: '',
+                    foodchoice: '',
+                    email: '',
+                    rsvp: false
+                },
+                {
+                    firstname: '',
+                    lastname: '',
+                    foodchoice: '',
+                    email: '',
+                    rsvp: false
+                },
+                {
+                    firstname: '',
+                    lastname: '',
+                    foodchoice: '',
+                    email: '',
+                    rsvp: false
+                }
+            ],
+            guestCount: 1
+        })
       }
 
       closeMe = (e) => {
@@ -475,7 +501,10 @@ class RSVP extends Component {
                     </RSVPMessage> : ''}
 
             <Title>RSVP Online</Title>
+            <span>
             <Button disabled={this.state.guestCount >= 5 ? true : false} style={{background: '#026782', marginBottom:'10px'}} id="addBtn" onClick={this.addGuest} waves="light"><i className="material-icons">add_circle</i></Button>
+            <Button style={{background: 'red', marginBottom:'10px', padding: '-10px', marginLeft: '10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
+            </span>
             <form id="rsvpForm" ref="form" onSubmit={this.handleButtonClick}>
                 {this.renderGuests()}
                 <Row>

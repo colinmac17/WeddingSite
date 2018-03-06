@@ -40,13 +40,11 @@ class Comments extends Component {
                     if(Object.keys(oComments).length > 0){
                         aaCommentObjs = Object.keys(oComments);
                         aaCommentObjs.forEach((comment) => {
-                            console.log(comments[comment].date)
                             date = comments[comment].date;
                             name = comments[comment].name;
                             comment = comments[comment].message;
                             aaComments.push({name: name, comment: comment, date: date})
                         });
-                        console.log(snapshot.val())
                         this.setState({aaComments: aaComments.reverse()})
                     }
                 }

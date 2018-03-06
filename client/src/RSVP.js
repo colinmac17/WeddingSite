@@ -431,7 +431,15 @@ class RSVP extends Component {
             if(index < this.state.guestCount){
                 const { firstname, lastname, foodchoice, rsvp, email } = oGuest;
                 if(firstname.length > 0 && lastname.length > 0 && email.length > 0 && $('select[name="rsvp"]').val() != -1){
-                    this.submitToFirebase(firstname, lastname, foodchoice, rsvp, email);
+                    if($('select[name="rsvp"]').val() == 1){
+                        if($('select[name="foodchoice"]').val() == -1){
+                            this.setState({showHelpMessage: true}) 
+                        } else {
+                            this.submitToFirebase(firstname, lastname, foodchoice, rsvp, email);
+                        }
+                    } else {
+                        this.submitToFirebase(firstname, lastname, foodchoice, rsvp, email); 
+                    }
                 } else {
                     this.setState({showHelpMessage: true}) 
                 }

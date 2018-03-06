@@ -518,7 +518,7 @@ class RSVP extends Component {
             <span stype={{marginBottom: '10px'}}>
             <Button disabled={this.state.guestCount >= 5 ? true : false} style={{background: '#026782'}} id="addBtn" onClick={this.addGuest} waves="light"><i className="material-icons">add_circle</i></Button>
             <Button style={{background: 'red', padding: '-10px', marginLeft: '10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
-            <p>Click to add or remove up to 5 guests</p>
+            <p style={{fontSize: '16px'}}>Click to add or remove up to 5 guests</p>
             </span>
             <form id="rsvpForm" ref="form" onSubmit={this.handleButtonClick}>
                 {this.renderGuests()}

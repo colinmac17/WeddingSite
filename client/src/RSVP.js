@@ -404,8 +404,10 @@ class RSVP extends Component {
           else this.setState({guestCount: this.state.guestCount - 1})
       }
 
-      submitToFirebase(firstname ,lastname, foodchoice, rsvp, email) {
+      submitToFirebase(aaValidGuests) {
           let firebase = require('firebase');
+          aaValidGuests.forEach((oGuest, index) => {
+            const { firstname, lastname, foodchoice, rsvp, email } = oGuest;
                 database.ref(`/guests/`).push({
                     firstname: firstname.toLowerCase(),
                     lastname: lastname.toLowerCase(),
@@ -422,30 +424,39 @@ class RSVP extends Component {
                         this.setState({ showMessage: true})
                     }
                 }));
+          })
       }
 
       handleButtonClick = (e) => {
         e.preventDefault();
+        const aaValidGuests = [] 
+        const aaInvalidGuests = []
+        const guestCount =  this.state.guestCount
         const { guests } = this.state
         guests.forEach((oGuest, index) => {
-            if(index < this.state.guestCount){
+            if(index < guestCount){
                 const { firstname, lastname, foodchoice, rsvp, email } = oGuest;
-                if(firstname.length > 0 && lastname.length > 0 && email.length > 0 && $('select[name="rsvp"]').val() != -1){
-                    if($('select[name="rsvp"]').val() == 1){
-                        if($('select[name="foodchoice"]').val() == -1){
-                            this.setState({showHelpMessage: true}) 
+                if(firstname.length > 0 && lastname.length > 0 && email.length > 0 && rsvp != -1 || false){
+                    if(rsvp == 1){
+                        if(foodchoice == -1 || foodchoice ==  '' || foodchoice == ""){
+                            aaInvalidGuests.push({firstname, lastname, foodchoice, rsvp, email}) 
                         } else {
-                            this.submitToFirebase(firstname, lastname, foodchoice, rsvp, email);
+                            aaValidGuests.push({firstname, lastname, foodchoice, rsvp, email})
                         }
                     } else {
-                        this.submitToFirebase(firstname, lastname, foodchoice, rsvp, email); 
+                        aaValidGuests.push({firstname, lastname, foodchoice, rsvp, email})
                     }
                 } else {
-                    this.setState({showHelpMessage: true}) 
+                    aaInvalidGuests.push({firstname, lastname, foodchoice, rsvp, email}) 
                 }
             }
         })
-        this.resetForm();
+        if(aaValidGuests.length === guestCount && aaInvalidGuests.length === 0){
+            this.submitToFirebase(aaValidGuests)
+            this.resetForm()
+        } else {
+            this.setState({showHelpMessage: true}) 
+        }
       }
 
       resetForm(){

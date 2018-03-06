@@ -166,6 +166,11 @@ p {
   .map {
     width: 600px;
   }
+  .nav-links{
+    font-size: 15px;
+    padding: 0px;
+    margin: -5px;
+  }
   #proposalPic {
     margin-top: 0px;
   }
@@ -174,11 +179,6 @@ p {
 @media screen and (max-width:500px) {
   .colin-and-kelsey a{
     font-size: 40px;
-  }
-  .nav-links{
-    font-size: 15px;
-    padding: 0px;
-    margin: -5px;
   }
   .nav-links-ul{
     padding: 0;

@@ -132,6 +132,7 @@ class RSVP extends Component {
               return(
                 <Fragment>
                 <Row>
+                <h5 style={{marginLeft: '10px'}}>Guest 1:</h5>
                     <Input data-guest="0" value={this.state.guests[0].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                         <Input data-guest="0" value={this.state.guests[0].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                         <Input data-guest="0" value={this.state.guests[0].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -148,6 +149,7 @@ class RSVP extends Component {
                         </Input>
                 </Row>
                 <Row>
+                <h5 style={{marginLeft: '10px'}}>Guest 2:</h5>
                 <Input data-guest="1" value={this.state.guests[1].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                     <Input data-guest="1" value={this.state.guests[1].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                     <Input data-guest="1" value={this.state.guests[1].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -170,6 +172,7 @@ class RSVP extends Component {
               return(
                   <Fragment>
                      <Row>
+                     <h5 style={{marginLeft: '10px'}}>Guest 1:</h5>
                     <Input data-guest="0" value={this.state.guests[0].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                         <Input data-guest="0" value={this.state.guests[0].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                         <Input data-guest="0" value={this.state.guests[0].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -186,6 +189,7 @@ class RSVP extends Component {
                         </Input>
                 </Row>
                 <Row>
+                <h5 style={{marginLeft: '10px'}}>Guest 2:</h5>
                 <Input data-guest="1" value={this.state.guests[1].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                     <Input data-guest="1" value={this.state.guests[1].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                     <Input data-guest="1" value={this.state.guests[1].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -202,6 +206,7 @@ class RSVP extends Component {
                     </Input>
                     </Row>
                         <Row>
+                        <h5 style={{marginLeft: '10px'}}>Guest 3:</h5>
                     <Input data-guest="2" value={this.state.guests[2].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                         <Input data-guest="2" value={this.state.guests[2].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                         <Input data-guest="2" value={this.state.guests[2].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -224,6 +229,7 @@ class RSVP extends Component {
               return(
                   <Fragment>
                         <Row>
+                        <h5 style={{marginLeft: '10px'}}>Guest 1:</h5>
                     <Input data-guest="0" value={this.state.guests[0].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                         <Input data-guest="0" value={this.state.guests[0].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                         <Input data-guest="0" value={this.state.guests[0].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -240,6 +246,7 @@ class RSVP extends Component {
                         </Input>
                 </Row>
                 <Row>
+                <h5 style={{marginLeft: '10px'}}>Guest 2:</h5>
                 <Input data-guest="1" value={this.state.guests[1].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                     <Input data-guest="1" value={this.state.guests[1].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                     <Input data-guest="1" value={this.state.guests[1].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -256,6 +263,7 @@ class RSVP extends Component {
                     </Input>
                     </Row>
                         <Row>
+                        <h5 style={{marginLeft: '10px'}}>Guest 3:</h5>
                     <Input data-guest="2" value={this.state.guests[2].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                         <Input data-guest="2" value={this.state.guests[2].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                         <Input data-guest="2" value={this.state.guests[2].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -272,6 +280,7 @@ class RSVP extends Component {
                         </Input>
                         </Row>
                         <Row>
+                        <h5 style={{marginLeft: '10px'}}>Guest 4:</h5>
                     <Input data-guest="3" value={this.state.guests[3].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                         <Input data-guest="3" value={this.state.guests[3].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                         <Input data-guest="3" value={this.state.guests[3].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -294,6 +303,7 @@ class RSVP extends Component {
               return(
                   <Fragment>
                          <Row>
+                         <h5 style={{marginLeft: '10px'}}>Guest 1:</h5>
                     <Input data-guest="0" value={this.state.guests[0].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                         <Input data-guest="0" value={this.state.guests[0].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                         <Input data-guest="0" value={this.state.guests[0].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -310,6 +320,7 @@ class RSVP extends Component {
                         </Input>
                 </Row>
                 <Row>
+                <h5 style={{marginLeft: '10px'}}>Guest 2:</h5>
                 <Input data-guest="1" value={this.state.guests[1].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                     <Input data-guest="1" value={this.state.guests[1].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                     <Input data-guest="1" value={this.state.guests[1].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -326,6 +337,7 @@ class RSVP extends Component {
                     </Input>
                     </Row>
                         <Row>
+                        <h5 style={{marginLeft: '10px'}}>Guest 3:</h5>
                     <Input data-guest="2" value={this.state.guests[2].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                         <Input data-guest="2" value={this.state.guests[2].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                         <Input data-guest="2" value={this.state.guests[2].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -342,6 +354,7 @@ class RSVP extends Component {
                         </Input>
                         </Row>
                         <Row>
+                        <h5 style={{marginLeft: '10px'}}>Guest 4:</h5>
                     <Input data-guest="3" value={this.state.guests[3].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                         <Input data-guest="3" value={this.state.guests[3].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                         <Input data-guest="3" value={this.state.guests[3].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -358,6 +371,7 @@ class RSVP extends Component {
                         </Input>
                         </Row>
                         <Row>
+                        <h5 style={{marginLeft: '10px'}}>Guest 5:</h5>
                     <Input data-guest="4" value={this.state.guests[4].firstname} onChange={this.onChange} placeholder="First Name" name="firstname" label="First Name" />
                         <Input data-guest="4" value={this.state.guests[4].lastname} onChange={this.onChange} placeholder="Last Name" name="lastname" label="Last Name" />
                         <Input data-guest="4" value={this.state.guests[4].email} onChange={this.onChange} type="email" placeholder="Email" name="email" label="Email" />
@@ -501,9 +515,10 @@ class RSVP extends Component {
                     </RSVPMessage> : ''}
 
             <Title>RSVP Online</Title>
-            <span>
-            <Button disabled={this.state.guestCount >= 5 ? true : false} style={{background: '#026782', marginBottom:'10px'}} id="addBtn" onClick={this.addGuest} waves="light"><i className="material-icons">add_circle</i></Button>
-            <Button style={{background: 'red', marginBottom:'10px', padding: '-10px', marginLeft: '10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
+            <span stype={{marginBottom: '10px'}}>
+            <Button disabled={this.state.guestCount >= 5 ? true : false} style={{background: '#026782'}} id="addBtn" onClick={this.addGuest} waves="light"><i className="material-icons">add_circle</i></Button>
+            <Button style={{background: 'red', padding: '-10px', marginLeft: '10px'}} id="removeBtn" onClick={this.removeGuest} waves="light"><i className="material-icons">highlight_off</i></Button>
+            <p>Click to add or remove up to 5 guests</p>
             </span>
             <form id="rsvpForm" ref="form" onSubmit={this.handleButtonClick}>
                 {this.renderGuests()}
